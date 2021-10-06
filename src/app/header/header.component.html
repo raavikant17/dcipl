@@ -1,0 +1,140 @@
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+
+      .image-fluid {
+        height: 100vh;
+      }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img
+          class="img-responsive"
+          src="assets/logo.png" 
+          alt="Darwish | Cybertech India Private Limited" 
+          style="max-width:100px;">
+        Darwish Cybertech</a>
+      <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link-d" id="id02" href="#">HOME</a>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link-d dropdown-toggle" id="id01" href="#" ngbDropdownToggle>ABOUT US</a>
+            <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+              <a class="dropdown-item" href="#">Company Profile</a>
+              <a class="dropdown-item" href="#">Journey So Far</a>
+              <a class="dropdown-item" href="#">Board Of Directors</a>
+              <a class="dropdown-item" href="#">Company Policies</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+              <a class="nav-link-d dropdown-toggle" id="id01" href="#" ngbDropdownToggle>SERVICES</a>
+              <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+                  <a class="dropdown-item" href="#">Enterprise Application Services</a>
+                  <a class="dropdown-item" href="#">Managed Services</a>
+                  <a class="dropdown-item" href="#">IT Enabled Services(ITES)</a>
+                  <a class="dropdown-item" href="#">Business Intelligence Services</a>
+              </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link-d" id="id02" href="#">CAREER</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link-d" id="id02" href="#">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
+      <mdb-carousel-item>
+        <div class="view">
+          <video class="video-fluid" autoplay loop>
+            <source src="assets/1056029879-hd-2.mp4" type="video/mp4" />
+          </video>
+          <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+        </div>
+    
+        <div class="carousel-caption">
+          <div class="animated fadeInDown delay-1s">
+            <!-- <h3 class="h3-responsive">Light mask</h3>
+            <p>First text</p> -->
+          </div>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <div class="view">
+          <img class="image-fluid" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="Second slide">
+          <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
+        </div>
+    
+        <div class="carousel-caption">
+          <div class="animated fadeInDown delay-1s">
+            <!-- <h3 class="h3-responsive">Super light mask</h3>
+            <p>Secondary text</p> -->
+          </div>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <div class="view">
+          <video class="video-fluid" autoplay loop>
+            <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+          </video>
+          <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
+    
+        <div class="carousel-caption">
+          <div class="animated fadeInDown delay-1s">
+            <!-- <h3 class="h3-responsive">Strong mask</h3>
+            <p>Third text</p> -->
+          </div>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+    
+  </header>
